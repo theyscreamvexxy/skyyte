@@ -1,0 +1,344 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Sidebar */
+.sidebar-left {
+    width: 22%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions span a{
+	text-decoration:None;
+	color:black;
+
+
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Suggestions Section */
+.suggestions, .topics {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.suggestions h3, .topics h3 {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.suggestions ul, .topics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Suggestion Items */
+.suggestions li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.suggestions li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.suggestions li div {
+    flex-grow: 1;
+}
+
+
+.username {
+    font-weight: bold;
+    color: #222;
+}
+
+.user-handle {
+    font-size: 12px;
+    color: gray;
+}
+.add-user {
+    width: 22px;
+    height: 22px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.add-user:hover {
+    opacity: 1;
+}
+
+
+/* Topics Section */
+.topics li {
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.2s;
+}
+
+.topics li:last-child {
+    border-bottom: none;
+}
+.topics li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.topics li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+/* Main Content */
+.main-content {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Stories Container */
+.stories-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures stories stay in one row */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    white-space: nowrap; /* Prevents wrapping */
+    gap: 20px; /* Space between stories */
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.stories-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari */
+}
+
+/* Individual Story */
+.story {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3d4be6, #22c3f0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0; /* Ensures stories don’t shrink */
+}
+
+/* Story Hover Effect */
+.story:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(255, 117, 140, 0.5);
+}
+
+
+.post {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Right Sidebar */
+/* Right Sidebar - Glassmorphism Effect (No Rounded Corners) */
+.sidebar-right {
+    width: 20%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.profile:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.profile-info span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Hover effect on "Switch" */
+.switch {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.switch:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+/* Search Box */
+.search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+	border-radius: 18px;
+}
+
+.search:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid black;
+    outline: 1px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    padding: 12px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+nav li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+nav li a img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    filter: invert(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav li:hover a img {
+    transform: scale(1.2);
+}
+.suggestions-right{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.explore-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.explore-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.explore-item img, 
+.explore-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.explore-item:hover img, 
+.explore-item:hover video {
+    transform: scale(1.05);
+}
+
+    
+  
+
+
